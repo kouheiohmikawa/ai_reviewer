@@ -1,33 +1,11 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 必要に応じて、以前のスタイルをここに移動 */
 .result-container {
-  @apply flex gap-4 mt-4; /* Tailwind CSS のユーティリティクラスを使用 */
+  @apply flex gap-4 mt-4; 
 }
 
 .result-pane {
-  @apply flex-1 overflow-auto; /* Tailwind CSS のユーティリティクラスを使用 */
+  @apply flex-1 overflow-auto; 
 }

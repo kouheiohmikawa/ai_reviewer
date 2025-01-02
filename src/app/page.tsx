@@ -65,15 +65,14 @@ function App() {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const geminiApiKey = process.env.REACT_APP_GEMINI_API_KEY;
 
-      if (!geminiApiKey) {
+      if (!YOUR API KEY) {
         throw new Error("API key is not defined");
       }
 
       const reviewPrompt = `あなたは経験豊富なシニアソフトウェアエンジニアです。以下の${language}で書かれたコードをレビューし、改善点を具体的に指摘してください。良い点にも言及し、初心者にもわかりやすいように説明してください。出力はマークダウン形式で記述してください。\n\nコード:\n\`\`\`${language}\n${code}\n\`\`\``;
       const reviewResponse = await axios.post<GeminiResponse>(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${geminiApiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${YOUR_API_KEY}`,
         {
           contents: [
             {
@@ -85,7 +84,7 @@ function App() {
 
       const refactorPrompt = `シニアエンジニアとして、以下の${language}で書かれたコードをリファクタリングしてください。\n\nコード:\n\`\`\`${language}\n${code}\n\`\`\``;
       const refactorResponse = await axios.post<GeminiResponse>(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${geminiApiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${YOUR_API_KEY}`
         {
           contents: [
             {
