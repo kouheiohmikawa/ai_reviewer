@@ -1,6 +1,6 @@
 "use client";
-// import React, { useState } from 'react'; // --> Next.js Pages Routerでは不要
-import { useState, useEffect } from 'react'; // useEffectを追加
+
+import { useState, useEffect } from 'react'; 
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { python } from '@codemirror/lang-python';
